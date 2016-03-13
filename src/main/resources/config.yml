@@ -1,0 +1,12 @@
+#  CCCCC   OOOOO  NNN   NN FFFFFFFFF  IIIII  GGGGGG
+# CCC     OO   OO NNNN  NN FF          III  GGG
+# CC      OO   OO NN NN NN FFFFFF      III  GGG GGGG
+# CCC     OO   OO NN  NNNN FF          III  GGG  GGG
+#  CCCCC   OOOOO  NN   NNN FF         IIIII  GGGGGG
+BungeecordReport:
+  MYSQL:
+    Host: localhost
+    Port: 3306
+    Database:
+    User:
+    Password: 
