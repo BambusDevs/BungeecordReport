@@ -1,5 +1,6 @@
 package com.github.BambusDevs.BungeecordReport;
 
+import com.github.BambusDevs.BungeecordReport.report.bug.commands.BugReportCommand;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.api.plugin.PluginManager;
@@ -31,6 +32,7 @@ public class Main extends Plugin {
 
         PluginManager pm = getProxy().getPluginManager();
         // Register Commands and Events
+        pm.registerCommand(this, new BugReportCommand());
     }
 
     private void initMYSQL() {
@@ -40,8 +42,12 @@ public class Main extends Plugin {
 
         if (MYSQL.isConnected()) {
             try {
-                PreparedStatement ps = MYSQL.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS BungeecordReport (Player TEXT, Reason TEXT, Info TEXT)");
-                ps.executeUpdate();
+                PreparedStatement pps = MYSQL.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS PlayerReport (Player TEXT, Reason TEXT, Info TEXT)");
+                PreparedStatement pbs = MYSQL.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS BugReport (Bug TEXT, Info TEXT)");
+                PreparedStatement pis = MYSQL.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS IdeaReport (Idea TEXT, Info TEXT)");
+                pps.executeUpdate();
+                pbs.executeUpdate();
+                pis.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

@@ -4,9 +4,11 @@
 # CCC     OO   OO NN  NNNN FF          III  GGG  GGG
 #  CCCCC   OOOOO  NN   NNN FF         IIIII  GGGGGG
 BungeecordReport:
+
+  #MySQL Settings
   MYSQL:
-    Host: localhost
-    Port: 3306
-    Database:
-    User:
-    Password: 
+    Host: localhost #Change here the Host of the Database
+    Port: 3306 #Dont Change this without you now what you do!
+    Database: BungeeReport #Change here the Name of the Database
+    User: BungeeReport #Change here the User of the Database
+    Password: 123 #Change here the Password of the User
