@@ -67,6 +67,8 @@ public class MYSQL {
 
         if (!fails.isEmpty()) {
             System.out.println(Main.Prefix + "MYSQL Service deactivated, because this Values are empty (" + String.join(", ", fails) + ")");
+        } else {
+            System.out.println(Main.Prefix + "MYSQL Service activated, that was a good idea!");
         }
     }
 
