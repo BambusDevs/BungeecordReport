@@ -1,0 +1,16 @@
+name: ${project.artifactId}
+authors: [Breuxi, Mondanzo]
+description: ${project.description}
+version: ${project.version}
+default-permission: ${project.artifactId}
+main: ${project.groupId}.${project.artifactId}.Main
+website: https://github.com/BambusDevs/BungeecordReport
+database: true
+
+commands:
+    command:
+       description:
+       usage: /<command>
+permissions:
+    ${project.artifactId}.*:
+       description: Gives accsess to all ${project.artifactId} Commands
