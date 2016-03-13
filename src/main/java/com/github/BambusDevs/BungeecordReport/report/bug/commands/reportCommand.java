@@ -2,10 +2,9 @@ package com.github.BambusDevs.BungeecordReport.report.bug.commands;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
+import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
-
-import java.io.Console;
 
 /**
  * Created by Karl24 on 13.03.2016.
@@ -21,8 +20,8 @@ public class reportCommand extends Command {
 
         if(args.length == 0){
                 if(sender instanceof ProxiedPlayer) {
-                    sender.sendMessage(ChatColor.RED + "[Bungeecord Report] Wrong Command!");
-                    sender.sendMessage(ChatColor.RED + "[Bungeecord Report] /report (player/bug/suggestion) (Player/Bug/suggestion) [More Information]");
+                    sender.sendMessage(new TextComponent(ChatColor.RED + "[Bungeecord Report] Wrong Command!"));
+                    sender.sendMessage(new TextComponent(ChatColor.RED + "[Bungeecord Report] /report (player/bug/suggestion) (Player/Bug/suggestion) [More Information]"));
                 } else {
                     System.out.println("[Bungeecord Report] Wrong Command!");
                     System.out.println("[Bungeecord Report] /report (player/bug/suggestion) (Player/Bug/suggestion) [More Information]");
